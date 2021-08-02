@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
-const { port } = require('./config')
-const apiRouter = require('./routes/api')
+const { port } = require('./app/config')
+const apiRouter = require('./app/routes/api')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
 //MongoDB
-require('./database/mongoose')
+require('./app/database/mongoose')
 
 app.use(bodyParser.json());
 
